@@ -1,0 +1,6 @@
+- git: {local-name: config, uri: 'duerer.usc.edu:~clmc/Git/Projects/config.git', version: master}
+- git: {local-name: utilities, uri: 'duerer.usc.edu:~clmc/Git/Projects/utilities.git', version: master}
+- git: {local-name: lwpr, uri: 'duerer.usc.edu:~clmc/Git/Projects/lwpr.git', version: master}
+- git: {local-name: SL, uri: 'duerer.usc.edu:~clmc/Git/Projects/SL.git', version: master}
+- git: {local-name: arm2D, uri: 'duerer.usc.edu:~clmc/Git/Projects/Arm2D.git', version: master}
+- git: {local-name: arm2DUser, uri: 'duerer.usc.edu:~clmc/Git/Projects/Arm2DUser.git', version: master}

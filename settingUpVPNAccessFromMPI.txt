@@ -1,0 +1,44 @@
+
+can get vpn from here:
+https://vpngw.tuebingen.mpg.de
+
+vpn address:
+vpngw.tuebingen.mpg.de
+
+once you vpn you can read about passwords and how to change them and whatnot here, with no login:
+https://atlas.is.localnet/confluence/display/IT/Accounts+and+Passwords
+
+
+if (youWantToDoAllTheFollowingInstructionsOnOneMachine)
+  instructions to proxy a browser into mpi are here:
+  https://atlas.is.localnet/confluence/display/SW/Accessing+the+services+from+outside+the+internal+network
+
+  First email raffi:
+  raffi.enficiaud@tue.mpg.de
+  to ask for a proxy account
+
+  Once you have account information, make sure the vpn is disconnected
+  in chromium, go to settings, then advanced, then network settings, then network proxy...
+
+  select auotmatic from the dropdown box, then paste in 
+  http://isweb.is.tuebingen.mpg.de/proxy/proxy.pac
+
+  hit "apply system wide"
+
+  if you try to go to one of confluence pages above, your browser should ask for the proxy username and account
+else
+  install a virtual machine, download the vpn client there, login and access confluence from it. The real (non virtual) OS is where you can access deurer and install SL and such, the virtual machine just lets you read the wiki
+
+end
+
+in the confluence wiki, navigate to: code base -> getting started
+
+Read anything and go through any tutorials you think will be useful to you.
+
+
+to get videos that have been recorded at the lab:
+http://replay.vidyo.tuebingen.mpg.de/replay/login.html?login_error=1
+
+you'll need a vidyo account (email stefan to set this up)
+
+unsupported system configuration. Adobe flash player was not detected

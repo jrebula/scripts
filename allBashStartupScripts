@@ -1,0 +1,5 @@
+
+alias startMatlab="~/scripts/startMatlab.sh"
+alias restartPrinter="~/scripts/restartPrinter.sh"
+
+
