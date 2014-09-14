@@ -28,6 +28,7 @@ function setupEmacsAsJuliaEditor()
         write(emacsStartupFile, "\n(load-theme 'wombat t)")
         write(emacsStartupFile, "\n(tool-bar-mode -1)")
         write(emacsStartupFile, "\n(add-to-list 'ess-tracebug-search-path $(pathToJuliaExecutable))\n")
+        write(emacsStartupFile, "\nadd-hook 'julia-mode-hook (lambda () (local-set-key [return] 'reindent-then-newline-and-indent)))")
     end
     ENV["JULIA_EDITOR"] = "emacs"
     #  cd(homedir() * '')
@@ -37,12 +38,12 @@ end
 
 function putJuliaOnPath()
   found = ismatch(r"julia", ENV["PATH"])
-  #if !found
-  #  ENV["PATH"] = ENV["PATH"] * ":" * pathToJuliaExecutable;
-  #end
-    open(homedir() * ".profile", "a") do profileFile
-        profile
-    end
+  if !found
+    ENV["PATH"] = ENV["PATH"] * ":" * pathToJuliaExecutable;
+  end
+    #open(homedir() * "/.profile", "a") do profileFile
+    #    write(profileFile, 
+    #end
 end
 #ENV["PATH"] = "./x86_64:/Network/Servers/duerer/Volumes/duerer/jrebula/HERMES/devel/bin:/usr/lib/ccache:.:./x86_64:/Network/Servers/duerer/Volumes/duerer/jrebula/bin:/Network/Servers/duerer/Volumes/duerer/jrebula/prog/bin/x86_64:/Network/Servers/duerer/Volumes/duerer/clmc/prog/bin/x86_64:.:/usr/X11R6/bin:/usr/local/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/Network/Servers/duerer/Volumes/duerer/jrebula/julia"
 
@@ -55,10 +56,18 @@ setupEmacsAsJuliaEditor()
 putJuliaOnPath()
 
 
-1+3;
-1-3;
 
 
+
+# TODO at some point play with opengl in julia
+#run(`sudo apt-get install xorg-dev libglu1-mesa-dev`)
+#Pkg.clone("https://github.com/glfw/glfw.git")
+#cd(homedir() * "/.julia/v0.4/glfw/")
+#Pkg.clone("https://github.com/JuliaGL/ModernGL.jl.git")
+#Pkg.clone("https://github.com/SimonDanisch/GLWindow.jl.git")
+#Pkg.clone("https://github.com/SimonDanisch/GLAbstraction.jl.git")
+#Pkg.clone("https://github.com/SimonDanisch/GLText.jl.git")
+#Pkg.clone("https://github.com/SimonDanisch/GLPlot.jl.git")
 
 
 

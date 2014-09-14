@@ -1,6 +1,5 @@
 
 
-
 function searchDir(path, key)
   println("searching dir " * path * " for the key " * key)
   if !isdir(path)
@@ -42,8 +41,9 @@ function getEnvironmentVariable(var::String)
   =#
 end
 
-
-
 function gitGui()
     run(`git gui`)
 end
+
+
++(a::Symbol, b::Symbol) = symbol(string(a) * string(b))
