@@ -47,8 +47,12 @@ function putJuliaOnPath()
 end
 #ENV["PATH"] = "./x86_64:/Network/Servers/duerer/Volumes/duerer/jrebula/HERMES/devel/bin:/usr/lib/ccache:.:./x86_64:/Network/Servers/duerer/Volumes/duerer/jrebula/bin:/Network/Servers/duerer/Volumes/duerer/jrebula/prog/bin/x86_64:/Network/Servers/duerer/Volumes/duerer/clmc/prog/bin/x86_64:.:/usr/X11R6/bin:/usr/local/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/Network/Servers/duerer/Volumes/duerer/jrebula/julia"
 
+run(`git config --global diff.external $homedir()/scripts/meldDiff.py`)
 
-edit(putJuliaOnPath)
+
+#edit(putJuliaOnPath)
+
+
 ## run all the functions thusly defined:
 
 setupEmacsAsJuliaEditor()
